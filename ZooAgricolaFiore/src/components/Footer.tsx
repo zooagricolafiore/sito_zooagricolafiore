@@ -2,6 +2,7 @@ import { Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import logo from "@/assets/logo_zooagricola.avif";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -19,11 +20,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-2xl">🐷</span>
-              </div>
-              <h3 className="text-2xl font-bold">ZooAgricolaFiore</h3>
+            <div className="mb-4">
+              <img src={logo} alt="ZooAgricolaFiore Logo" className="h-16 w-auto" />
             </div>
             <p className="text-white/80 mb-6">
               L'eccellenza del suino per voi

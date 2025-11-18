@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo_zooagricola.avif";
 
 const Navigation = () => {
   const location = useLocation();
@@ -17,12 +18,9 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-              <span className="text-2xl">🐷</span>
-            </div>
-            <span className="text-white font-bold text-xl hidden sm:inline">FIORE</span>
-          </div>
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="ZooAgricolaFiore Logo" className="h-12 w-auto" />
+          </Link>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
