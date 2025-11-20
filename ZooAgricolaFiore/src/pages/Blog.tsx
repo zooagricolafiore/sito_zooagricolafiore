@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactInfoSection from "@/components/ContactInfoSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { Link } from "react-router-dom";
 import blogHero from "@/assets/blog-hero.jpg";
 import blogGenetics from "@/assets/blog-genetics.jpg";
 import blogSustainable from "@/assets/blog-sustainable.jpg";
@@ -19,76 +20,91 @@ const Blog = () => {
       date: "Nov 5, 2025",
       title: "Investire nel futuro: come la selezione genetica sta cambiando la suinicoltura",
       image: blogGenetics,
+      link: "/blog/selezione-genetica-suinicoltura",
     },
     {
       date: "Oct 25, 2025",
       title: "Mangime naturale e filiera circolare: come alimentare suini in modo sostenibile",
       image: blogSustainable,
+      link: "/blog/mangime-naturale-filiera-circolare",
     },
     {
       date: "Oct 15, 2025",
       title: "Omega-3 e CLA: il profilo nutrizionale del maiale tradizionale",
       image: blogOmega3,
+      link: "/blog/omega3-cla-profilo-nutrizionale",
     },
     {
       date: "Oct 5, 2025",
       title: "Il mondo del maiale in cucina: tagli alternativi e piatti che sorprendono",
       image: blogCooking,
+      link: "/blog/tagli-alternativi-maiale-cucina",
     },
     {
       date: "Sep 25, 2025",
       title: "Carni suine sostenibili: innovazione e qualità nella filiera del maiale italiano",
       image: blogPigWelfare,
+      link: "/blog/carni-suine-sostenibili-innovazione",
     },
     {
       date: "Sep 15, 2025",
       title: "Agricoltura rigenerativa e suinicoltura: quando il suolo ringrazia",
       image: blogSustainable,
+      link: "/blog/agricoltura-rigenerativa-suinicoltura",
     },
     {
       date: "Sep 5, 2025",
       title: "Prosciutto 4.0: tradizione e innovazione verso il 2025",
       image: blogProsciutto,
+      link: "/blog/prosciutto-40-tradizione-innovazione",
     },
     {
       date: "Aug 25, 2025",
       title: "Dal naso alla coda: l'arte di usare tutto il maiale e dire addio agli sprechi",
       image: blogPigWelfare,
+      link: "/blog/nose-to-tail-usare-tutto-maiale",
     },
     {
       date: "Aug 15, 2025",
       title: "Antibiotic-Free Pork: la rivoluzione della carne sana",
       image: blogAntibioticFree,
+      link: "/blog/antibiotic-free-pork-carne-sana",
     },
     {
       date: "Aug 5, 2025",
       title: "Rare Breed Pork: il mercato gourmet delle razze antiche",
       image: blogPigWelfare,
+      link: "/blog/rare-breed-pork-razze-antiche",
     },
     {
       date: "Jul 25, 2025",
       title: "Wine & Ham: guida agli abbinamenti perfetti con il prosciutto artigianale",
       image: blogWinePairing,
+      link: "/blog/wine-ham-abbinamenti-prosciutto",
     },
     {
       date: "Jul 16, 2025",
       title: "Mangalica: storia e sapori",
       image: blogPigWelfare,
+      link: "/blog/mangalica-storia-sapori",
     },
     {
       date: "Jul 6, 2025",
       title: "Guida definitiva alla grigliata estiva",
       image: blogGrilling,
+      link: "/blog/guida-grigliata-estiva",
     },
     {
       date: "Jun 26, 2025",
       title: "Perché scegliere il suino semibrado",
       image: blogPigWelfare,
+      link: "/blog/perche-scegliere-suino-semibrado",
     },
     {
       date: "Jun 16, 2025",
       title: "Benefici di scegliere una produzione locale come la nostra",
       image: blogSustainable,
+      link: "/blog/benefici-produzione-locale",
     },
   ];
 
@@ -120,8 +136,9 @@ const Blog = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogPosts.map((post, index) => (
-              <div 
+              <Link
                 key={index}
+                to={post.link}
                 className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer transition-transform duration-300 hover:scale-105"
               >
                 <img
@@ -138,7 +155,7 @@ const Blog = () => {
                     {post.title}
                   </h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

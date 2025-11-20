@@ -1,7 +1,7 @@
 import barrels from "@/assets/barrels.jpg";
 import salami from "@/assets/salami.jpg";
 import blackPigs from "@/assets/black-pigs.jpg";
-import pigsNature from "@/assets/pigs-nature.jpg";
+import videoZooagricola from "@/assets/video_zooagricola.mp4";
 
 const TraditionSection = () => {
   const circleImages = [
@@ -63,11 +63,14 @@ const TraditionSection = () => {
               Natura, tradizione e famiglia
             </h3>
 
-            {/* Large image of pigs in nature */}
+            {/* Video of pigs in nature */}
             <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-black">
-              <img
-                src={pigsNature}
-                alt="Pigs in natural environment"
+              <video
+                src={videoZooagricola}
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-auto object-cover"
               />
             </div>

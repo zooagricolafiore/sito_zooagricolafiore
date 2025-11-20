@@ -130,9 +130,16 @@ const ContactInfoSection = () => {
               <h3 className="text-3xl font-bold text-foreground mb-6">
                 Orario invernale:
               </h3>
-              <p className="text-lg text-foreground ml-20">
-                Giovedì 16-19; Venerdì 9-13 e 16-19; Sabato: 9-13
-              </p>
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 rounded-full bg-forest-green flex items-center justify-center flex-shrink-0">
+                  <Calendar className="w-8 h-8 text-golden-yellow" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-lg text-foreground">
+                    Giovedì 16-19; Venerdì 9-13 e 16-19; Sabato: 9-13
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import rotaryAward from "@/assets/rotary-award.jpg";
 import storeOpening from "@/assets/store-opening.jpg";
 import storeRestyling from "@/assets/store-restyling.jpg";
@@ -9,18 +10,22 @@ const AwardsEventsSection = () => {
     {
       title: "Rotary Club Viterbo",
       image: rotaryAward,
+      link: "/rotary-club-viterbo",
     },
     {
       title: "Inaugurazione punto vendita",
       image: storeOpening,
+      link: "/inaugurazione-punto-vendita",
     },
     {
       title: "Restyling punto vendita",
       image: storeRestyling,
+      link: "/restyling-punto-vendita",
     },
     {
       title: "Degustazione stalla San Sebastiano cantina Von Blumen",
       image: tastingEvent,
+      link: "/degustazione-von-blumen",
     },
   ];
 
@@ -57,9 +62,10 @@ const AwardsEventsSection = () => {
         {/* Events Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {events.map((event, index) => (
-            <div
+            <Link
               key={index}
-              className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-96"
+              to={event.link}
+              className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-96 block"
             >
               {/* Image */}
               <img
@@ -77,19 +83,21 @@ const AwardsEventsSection = () => {
                   {event.title}
                 </h3>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <Button
-            variant="hero"
-            size="lg"
-            className="rounded-full px-12 text-base"
-          >
-            Scopri di più
-          </Button>
+          <Link to="/eventi">
+            <Button
+              variant="hero"
+              size="lg"
+              className="rounded-full px-12 text-base"
+            >
+              Scopri di più
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import blogGenetics from "@/assets/blog-genetics.jpg";
 import blogCooking from "@/assets/blog-cooking.jpg";
 import blogOmega3 from "@/assets/blog-omega3.jpg";
@@ -7,7 +9,9 @@ import blogPigWelfare from "@/assets/blog-pig-welfare.jpg";
 import blogAntibioticFree from "@/assets/blog-antibiotic-free.jpg";
 import blogWinePairing from "@/assets/blog-wine-pairing.jpg";
 import blogGrilling from "@/assets/blog-grilling.jpg";
+import blogStoriaSapori from "@/assets/blog-storia-sapori.jpg"
 import heroFarm from "@/assets/hero-farm.jpg";
+
 
 const BlogNewsSection = () => {
   const blogPosts = [
@@ -76,7 +80,7 @@ const BlogNewsSection = () => {
     {
       date: "Jul 16, 2025",
       title: "Mangalica: storia e sapori",
-      image: blogPigWelfare,
+      image: blogStoriaSapori,
     },
     {
       date: "Jul 6, 2025",
@@ -113,7 +117,7 @@ const BlogNewsSection = () => {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {blogPosts.map((post, index) => (
             <article
               key={index}
@@ -145,6 +149,19 @@ const BlogNewsSection = () => {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <Link to="/blog">
+            <Button
+              variant="hero"
+              size="lg"
+              className="rounded-full px-12 text-base"
+            >
+              Scopri di più
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

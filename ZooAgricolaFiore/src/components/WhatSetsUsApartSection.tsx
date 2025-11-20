@@ -1,28 +1,58 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import animalWelfare from "@/assets/animal-welfare.jpg";
 import slowAging from "@/assets/slow-aging.jpg";
 import familyRecipes from "@/assets/family-recipes.jpg";
+import energySolar from "@/assets/energy-solar.jpg";
+import kmZero from "@/assets/km-zero.jpg";
+import innovation from "@/assets/innovation.jpg";
 
 const WhatSetsUsApartSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const features = [
     {
       badge: "Vita Serena",
       title: "Benessere Animale",
       description: "Spazi aperti, dieta naturale, vita serena: carne sana",
       image: animalWelfare,
+      link: "/benessere-animale",
     },
     {
       badge: "Tempo Maestro",
       title: "Stagionatura lenta",
       description: "Tempo e cura esaltano aromi, morbidezza, gusto intenso.",
       image: slowAging,
+      link: "/stagionatura-lenta",
     },
     {
       badge: "Sapori Veraci",
       title: "Ricette Familiari",
       description: "Sale, pepe, aglio: tradizione norcina, zero additivi.",
       image: familyRecipes,
+      link: "/ricette-familiari",
+    },
+    {
+      badge: "Energia Pulita",
+      title: "Energia Solare",
+      description: "Fotovoltaico: emissioni ridotte, allevamento quasi autosufficiente.",
+      image: energySolar,
+      link: "/energia-solare",
+    },
+    {
+      badge: "Filiera corta",
+      title: "Km Zero",
+      description: "Materie prime locali, filiera corta, freschezza quotidiana garantita.",
+      image: kmZero,
+      link: "/km-zero",
+    },
+    {
+      badge: "Miglioramento continuo",
+      title: "Innovazione",
+      description: "Come garantire una qualità continuativamente alta",
+      image: innovation,
+      link: "/innovazione",
     },
   ];
 
@@ -42,6 +72,7 @@ const WhatSetsUsApartSection = () => {
               size="icon"
               className="rounded-full w-12 h-12"
               aria-label="Previous"
+              onClick={() => setCurrentIndex((currentIndex - 1 + features.length) % features.length)}
             >
               <ChevronLeft className="w-6 h-6" />
             </Button>
@@ -50,18 +81,25 @@ const WhatSetsUsApartSection = () => {
               size="icon"
               className="rounded-full w-12 h-12"
               aria-label="Next"
+              onClick={() => setCurrentIndex((currentIndex + 1) % features.length)}
             >
               <ChevronRight className="w-6 h-6" />
             </Button>
           </div>
         </div>
 
-        {/* Feature Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <div
+        {/* Feature Cards Carousel */}
+        <div className="overflow-hidden">
+          <div 
+            className="flex gap-6 transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+          >
+            {[...features, ...features.slice(0, 3)].map((feature, index) => (
+            <Link
               key={index}
-              className="bg-forest-green rounded-2xl p-6 text-white"
+              to={feature.link}
+              className="bg-forest-green rounded-2xl p-6 text-white flex-shrink-0 hover:bg-forest-green/90 transition-colors cursor-pointer block"
+              style={{ width: 'calc(33.333% - 16px)' }}
             >
               {/* Image */}
               <div className="mb-5 rounded-xl overflow-hidden">
@@ -91,8 +129,9 @@ const WhatSetsUsApartSection = () => {
               <p className="text-white/85 text-sm leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </Link>
           ))}
+          </div>
         </div>
       </div>
     </section>

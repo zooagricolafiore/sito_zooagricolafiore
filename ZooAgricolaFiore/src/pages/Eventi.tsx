@@ -1,11 +1,17 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactInfoSection from "@/components/ContactInfoSection";
+import { Link } from "react-router-dom";
 import eventiHero from "@/assets/eventi-hero.jpg";
 import rotaryAward from "@/assets/rotary-award.jpg";
 import storeOpening from "@/assets/store-opening.jpg";
 import storeRestyling from "@/assets/store-restyling.jpg";
 import tastingEvent from "@/assets/tasting-event.jpg";
+import areonautica from "@/assets/areonautica.jpg"
+import vinitaly from "@/assets/vinitaly.jpg"
+import rete4 from "@/assets/rete4.jpg"
+import spartanrace from "@/assets/spartan-race.jpg"
+
 
 const Eventi = () => {
   return (
@@ -36,17 +42,18 @@ const Eventi = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Rotary Club Viterbo", image: rotaryAward },
-              { title: "Innaugurazione punto vendita", image: storeOpening },
-              { title: "Restyling punto vendita", image: storeRestyling },
-              { title: "Degustazione stalla San Sebastiano cantina Von Blumen", image: tastingEvent },
-              { title: "Stand Gastronomico Centenario Aereonautica Militare", image: storeOpening },
-              { title: "Rete4 - Ricette all'italiana mengacci", image: tastingEvent },
-              { title: "Spartan Race", image: storeRestyling },
-              { title: "Vinitaly", image: tastingEvent },
+              { title: "Rotary Club Viterbo", image: rotaryAward, link: "/rotary-club-viterbo" },
+              { title: "Inaugurazione punto vendita", image: storeOpening, link: "/inaugurazione-punto-vendita" },
+              { title: "Restyling punto vendita", image: storeRestyling, link: "/restyling-punto-vendita" },
+              { title: "Degustazione stalla San Sebastiano cantina Von Blumen", image: tastingEvent, link: "/degustazione-von-blumen" },
+              { title: "Stand Gastronomico Centenario Aeronautica Militare", image: areonautica, link: "/centenario-aeronautica" },
+              { title: "Rete4 - Ricette all'Italiana Mengacci", image: rete4, link: "/ricette-italiana-mengacci" },
+              { title: "Spartan Race Orte", image: spartanrace, link: "/spartan-race-orte" },
+              { title: "Vinitaly Verona", image: vinitaly, link: "/vinitaly-verona" },
             ].map((event, index) => (
-              <div 
+              <Link
                 key={index}
+                to={event.link}
                 className="relative group overflow-hidden rounded-lg aspect-[4/3] cursor-pointer"
               >
                 <img
@@ -60,7 +67,7 @@ const Eventi = () => {
                     {event.title}
                   </h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

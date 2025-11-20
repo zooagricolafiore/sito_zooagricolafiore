@@ -6,6 +6,9 @@ import productsHero from "@/assets/products-hero.jpg";
 import pigsNature from "@/assets/pigs-nature.jpg";
 import blackPigs from "@/assets/black-pigs.jpg";
 import animalWelfare from "@/assets/animal-welfare.jpg";
+import brado from "@/assets/produzione-brado.jpg"
+import fiore from "@/assets/produzione-fiore.jpg"
+import classico from "@/assets/produzione-classic.jpg"
 
 const Prodotti = () => {
   return (
@@ -39,7 +42,7 @@ const Prodotti = () => {
             <div className="flex flex-col items-center text-center">
               <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6">
                 <img
-                  src={animalWelfare}
+                  src={classico}
                   alt="Produzione Fiore Classic"
                   className="w-full h-full object-cover"
                 />
@@ -63,7 +66,7 @@ const Prodotti = () => {
             <div className="flex flex-col items-center text-center">
               <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6">
                 <img
-                  src={pigsNature}
+                  src={brado}
                   alt="Produzione Fiore Brado"
                   className="w-full h-full object-cover"
                 />
@@ -87,7 +90,7 @@ const Prodotti = () => {
             <div className="flex flex-col items-center text-center">
               <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6">
                 <img
-                  src={blackPigs}
+                  src={fiore}
                   alt="Produzione Fiore Mangalica"
                   className="w-full h-full object-cover"
                 />
