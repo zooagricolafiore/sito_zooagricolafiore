@@ -1,18 +1,29 @@
 import { Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import logo from "@/assets/logo_zooagricola.avif";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Implement newsletter signup
     console.log("Newsletter signup:", email);
     setEmail("");
+  };
+
+  const handleScrollToSection = (sectionId: string) => {
+    navigate("/");
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
   };
 
   return (
@@ -59,12 +70,12 @@ const Footer = () => {
               >
                 Riconoscimenti e Eventi
               </Link>
-              <Link
-                to="/"
-                className="block text-white/80 hover:text-white transition-colors"
+              <button
+                onClick={() => handleScrollToSection("cosa-ci-contraddistingue")}
+                className="block text-white/80 hover:text-white transition-colors text-left"
               >
                 Cosa ci contraddistingue
-              </Link>
+              </button>
               <Link
                 to="/blog"
                 className="block text-white/80 hover:text-white transition-colors"
@@ -90,12 +101,12 @@ const Footer = () => {
               >
                 La nostra storia
               </Link>
-              <Link
-                to="/"
-                className="block text-white/80 hover:text-white transition-colors"
+              <button
+                onClick={() => handleScrollToSection("recensioni")}
+                className="block text-white/80 hover:text-white transition-colors text-left"
               >
                 Recensioni
-              </Link>
+              </button>
             </nav>
           </div>
 

@@ -15,10 +15,14 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <TraditionSection />
-      <WhatSetsUsApartSection />
+      <div id="cosa-ci-contraddistingue">
+        <WhatSetsUsApartSection />
+      </div>
       <IdentitySection />
       <AwardsEventsSection />
-      <TestimonialsSection />
+      <div id="recensioni">
+        <TestimonialsSection />
+      </div>
       <BlogNewsSection />
       <ContactInfoSection />
       <Footer />

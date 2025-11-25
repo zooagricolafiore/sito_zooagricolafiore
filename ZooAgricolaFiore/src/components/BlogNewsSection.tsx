@@ -20,82 +20,97 @@ const BlogNewsSection = () => {
       title:
         "Investire nel futuro: come la selezione genetica sta cambiando la suinicoltura",
       image: blogGenetics,
+      link: "/blog/selezione-genetica-suinicoltura",
     },
     {
       date: "Oct 25, 2025",
       title:
         "Mangime naturale e filiera circolare: come alimentare suini in modo sostenibile",
       image: heroFarm,
+      link: "/blog/mangime-naturale-filiera-circolare",
     },
     {
       date: "Oct 15, 2025",
       title: "Omega-3 e CLA: il profilo nutrizionale del maiale tradizionale",
       image: blogOmega3,
+      link: "/blog/omega3-cla-profilo-nutrizionale",
     },
     {
       date: "Oct 5, 2025",
       title:
         "Il mondo del maiale in cucina: tagli alternativi e piatti che sorprendono",
       image: blogCooking,
+      link: "/blog/tagli-alternativi-maiale-cucina",
     },
     {
       date: "Sep 25, 2025",
       title:
         "Carni suine sostenibili: innovazione e qualità nella filiera del maiale italiano",
       image: blogSustainable,
+      link: "/blog/carni-suine-sostenibili-innovazione",
     },
     {
       date: "Sep 15, 2025",
       title:
         "Agricoltura rigenerativa e suinicoltura: quando il suolo ringrazia",
       image: heroFarm,
+      link: "/blog/agricoltura-rigenerativa-suinicoltura",
     },
     {
       date: "Sep 5, 2025",
       title: "Prosciutto 4.0: tradizione e innovazione verso il 2025",
       image: blogProsciutto,
+      link: "/blog/prosciutto-40-tradizione-innovazione",
     },
     {
       date: "Aug 25, 2025",
       title:
         "Dal naso alla coda: l'arte di usare tutto il maiale e dire addio agli sprechi",
       image: blogPigWelfare,
+      link: "/blog/nose-to-tail-usare-tutto-maiale",
     },
     {
       date: "Aug 15, 2025",
       title: "Antibiotic-Free Pork: la rivoluzione della carne sana",
       image: blogAntibioticFree,
+      link: "/blog/antibiotic-free-pork-carne-sana",
     },
     {
       date: "Aug 5, 2025",
       title: "Rare Breed Pork: il mercato gourmet delle razze antiche",
       image: blogSustainable,
+      link: "/blog/rare-breed-pork-razze-antiche",
     },
     {
       date: "Jul 25, 2025",
       title:
         "Wine & Ham: guida agli abbinamenti perfetti con il prosciutto artigianale",
       image: blogWinePairing,
+      link: "/blog/wine-ham-abbinamenti-prosciutto",
     },
     {
       date: "Jul 16, 2025",
       title: "Mangalica: storia e sapori",
       image: blogStoriaSapori,
+      link: "/blog/mangalica-storia-sapori",
     },
     {
       date: "Jul 6, 2025",
       title: "Guida definitiva alla grigliata estiva",
       image: blogGrilling,
+      link: "/blog/guida-grigliata-estiva",
     },
     {
       date: "Jun 26, 2025",
       title: "Perché scegliere il suino semibrado",
       image: blogSustainable,
+      link: "/blog/perche-scegliere-suino-semibrado",
     },
     {
       date: "Jun 16, 2025",
       title: "Benefici di scegliere una produzione locale come la nostra",
       image: heroFarm,
+      link: "/blog/benefici-produzione-locale",
     },
   ];
 
@@ -119,35 +134,34 @@ const BlogNewsSection = () => {
         {/* Blog Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {blogPosts.map((post, index) => (
-            <article
-              key={index}
-              className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer h-72"
-            >
-              {/* Image */}
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+            <Link key={index} to={post.link}>
+              <article className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer h-72">
+                {/* Image */}
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
 
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
-              {/* Content */}
-              <div className="absolute inset-0 p-5 flex flex-col justify-between">
-                {/* Date */}
-                <div>
-                  <span className="inline-block bg-golden-yellow/15 backdrop-blur-sm text-golden-yellow px-3 py-1 rounded-full text-xs font-medium">
-                    {post.date}
-                  </span>
+                {/* Content */}
+                <div className="absolute inset-0 p-5 flex flex-col justify-between">
+                  {/* Date */}
+                  <div>
+                    <span className="inline-block bg-golden-yellow/15 backdrop-blur-sm text-golden-yellow px-3 py-1 rounded-full text-xs font-medium">
+                      {post.date}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-white text-lg font-bold leading-snug">
+                    {post.title}
+                  </h3>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-white text-lg font-bold leading-snug">
-                  {post.title}
-                </h3>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
 

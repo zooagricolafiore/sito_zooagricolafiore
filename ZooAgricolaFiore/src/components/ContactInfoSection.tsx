@@ -61,7 +61,7 @@ const ContactInfoSection = () => {
               <h3 className="text-3xl font-bold text-foreground mb-6">
                 Posizione:
               </h3>
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-full bg-forest-green flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-8 h-8 text-golden-yellow" />
                 </div>
@@ -116,7 +116,7 @@ const ContactInfoSection = () => {
               <h3 className="text-3xl font-bold text-foreground mb-6">
                 Orario estivo:
               </h3>
-              <div className="flex items-start gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-8">
                 <div className="w-16 h-16 rounded-full bg-forest-green flex items-center justify-center flex-shrink-0">
                   <Calendar className="w-8 h-8 text-golden-yellow" />
                 </div>
@@ -130,7 +130,7 @@ const ContactInfoSection = () => {
               <h3 className="text-3xl font-bold text-foreground mb-6">
                 Orario invernale:
               </h3>
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-full bg-forest-green flex items-center justify-center flex-shrink-0">
                   <Calendar className="w-8 h-8 text-golden-yellow" />
                 </div>

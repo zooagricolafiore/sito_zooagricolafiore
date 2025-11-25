@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroFarm from "@/assets/hero-farm.jpg";
 
 const HeroSection = () => {
@@ -41,12 +42,16 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <Button variant="hero" size="lg" className="rounded-full px-10 text-base">
-              I nostri prodotti
-            </Button>
-            <Button variant="hero-outline" size="lg" className="rounded-full px-10 text-base">
-              La nostra storia
-            </Button>
+            <Link to="/prodotti">
+              <Button variant="hero" size="lg" className="rounded-full px-10 text-base">
+                I nostri prodotti
+              </Button>
+            </Link>
+            <Link to="/storia">
+              <Button variant="hero-outline" size="lg" className="rounded-full px-10 text-base">
+                La nostra storia
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
