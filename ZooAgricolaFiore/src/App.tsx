@@ -39,6 +39,9 @@ import Mangalica from "./pages/blog/Mangalica";
 import GrigliatEstiva from "./pages/blog/GrigliatEstiva";
 import SuinoSemibrado from "./pages/blog/SuinoSemibrado";
 import ProduzioneLocale from "./pages/blog/ProduzioneLocale";
+import FioreClassic from "./pages/products/FioreClassic";
+import FioreBrado from "./pages/products/FioreBrado";
+import FioreMangalica from "./pages/products/FioreMangalica";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -86,6 +89,9 @@ const App = () => (
           <Route path="/blog/guida-grigliata-estiva" element={<GrigliatEstiva />} />
           <Route path="/blog/perche-scegliere-suino-semibrado" element={<SuinoSemibrado />} />
           <Route path="/blog/benefici-produzione-locale" element={<ProduzioneLocale />} />
+          <Route path="/prodotti/fiore-classic" element={<FioreClassic />} />
+          <Route path="/prodotti/fiore-brado" element={<FioreBrado />} />
+          <Route path="/prodotti/fiore-mangalica" element={<FioreMangalica />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

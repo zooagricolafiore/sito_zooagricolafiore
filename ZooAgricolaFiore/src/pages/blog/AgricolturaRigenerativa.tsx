@@ -4,6 +4,8 @@ import ContactInfoSection from "@/components/ContactInfoSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroFarm from "@/assets/hero-farm.jpg";
+import blogSustainable from "@/assets/blog-sustainable.jpg";
+import blogOmega3 from "@/assets/blog-omega3.jpg";
 
 const AgricolturaRigenerativa = () => {
   return (
@@ -34,8 +36,44 @@ const AgricolturaRigenerativa = () => {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Esplora tutta la nostra conoscenza</h3>
-                  <p className="text-sm mb-6 opacity-90">Scopri tutti i nostri articoli sul mondo della suinicoltura</p>
-                  <Link to="/blog"><Button variant="secondary" className="w-full">Vai al Blog</Button></Link>
+                  <div className="space-y-4 mt-6">
+                    <Link to="/blog/carni-suine-sostenibili-innovazione" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogSustainable} alt="Carni Sostenibili" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Carni suine sostenibili</p>
+                          <p className="text-xs opacity-75">25 Set, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/mangime-naturale-filiera-circolare" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={heroFarm} alt="Mangime Naturale" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Mangime naturale</p>
+                          <p className="text-xs opacity-75">25 Ott, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/omega3-cla-profilo-nutrizionale" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogOmega3} alt="Omega-3 e CLA" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Omega-3 e CLA</p>
+                          <p className="text-xs opacity-75">15 Ott, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/benefici-produzione-locale" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={heroFarm} alt="Produzione Locale" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Produzione locale</p>
+                          <p className="text-xs opacity-75">16 Giu, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Eccellenza suina da quattro generazioni</h3>

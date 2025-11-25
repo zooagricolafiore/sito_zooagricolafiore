@@ -4,6 +4,8 @@ import ContactInfoSection from "@/components/ContactInfoSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import blogSustainable from "@/assets/blog-sustainable.jpg";
+import heroFarm from "@/assets/hero-farm.jpg";
+import blogPigWelfare from "@/assets/blog-pig-welfare.jpg";
 
 const CarniSostenibili = () => {
   return (
@@ -34,8 +36,44 @@ const CarniSostenibili = () => {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Esplora tutta la nostra conoscenza</h3>
-                  <p className="text-sm mb-6 opacity-90">Scopri tutti i nostri articoli sul mondo della suinicoltura</p>
-                  <Link to="/blog"><Button variant="secondary" className="w-full">Vai al Blog</Button></Link>
+                  <div className="space-y-4 mt-6">
+                    <Link to="/blog/agricoltura-rigenerativa-suinicoltura" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={heroFarm} alt="Agricoltura Rigenerativa" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Agricoltura rigenerativa</p>
+                          <p className="text-xs opacity-75">15 Set, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/antibiotic-free-pork-carne-sana" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogPigWelfare} alt="Antibiotic Free" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Antibiotic-Free Pork</p>
+                          <p className="text-xs opacity-75">15 Ago, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/perche-scegliere-suino-semibrado" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogSustainable} alt="Suino Semibrado" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Suino semibrado</p>
+                          <p className="text-xs opacity-75">26 Giu, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/benefici-produzione-locale" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={heroFarm} alt="Produzione Locale" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Produzione locale</p>
+                          <p className="text-xs opacity-75">16 Giu, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Eccellenza suina da quattro generazioni</h3>

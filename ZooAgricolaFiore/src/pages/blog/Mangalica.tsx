@@ -4,6 +4,9 @@ import ContactInfoSection from "@/components/ContactInfoSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import blogStoriaSapori from "@/assets/blog-storia-sapori.jpg";
+import blogSustainable from "@/assets/blog-sustainable.jpg";
+import blogGenetics from "@/assets/blog-genetics.jpg";
+import blogPigWelfare from "@/assets/blog-pig-welfare.jpg";
 
 const Mangalica = () => {
   return (
@@ -34,8 +37,44 @@ const Mangalica = () => {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Esplora tutta la nostra conoscenza</h3>
-                  <p className="text-sm mb-6 opacity-90">Scopri tutti i nostri articoli sul mondo della suinicoltura</p>
-                  <Link to="/blog"><Button variant="secondary" className="w-full">Vai al Blog</Button></Link>
+                  <div className="space-y-4 mt-6">
+                    <Link to="/blog/rare-breed-pork-razze-antiche" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogSustainable} alt="Rare Breed" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Rare Breed Pork</p>
+                          <p className="text-xs opacity-75">5 Ago, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/selezione-genetica-suinicoltura" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogGenetics} alt="Selezione Genetica" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Selezione genetica</p>
+                          <p className="text-xs opacity-75">5 Nov, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/perche-scegliere-suino-semibrado" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogPigWelfare} alt="Suino Semibrado" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Suino semibrado</p>
+                          <p className="text-xs opacity-75">26 Giu, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/wine-ham-abbinamenti-prosciutto" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogStoriaSapori} alt="Wine & Ham" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Wine & Ham</p>
+                          <p className="text-xs opacity-75">25 Lug, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Eccellenza suina da quattro generazioni</h3>

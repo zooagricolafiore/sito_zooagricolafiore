@@ -92,7 +92,7 @@ const ContactInfoSection = () => {
                 </div>
                 <div className="flex-1 space-y-2">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/aziendazooagricolafiore/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xl font-semibold text-foreground hover:text-forest-green transition-colors block"
@@ -100,7 +100,7 @@ const ContactInfoSection = () => {
                     Instagram
                   </a>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/people/Az-Zooagricola-FIORE-di-Magnaterra-Daniele/100057201650265/?rdid=3NS1I32580AeI2IV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CQwybdB7v%2F"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xl font-semibold text-foreground hover:text-forest-green transition-colors block"

@@ -4,6 +4,9 @@ import ContactInfoSection from "@/components/ContactInfoSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import blogWinePairing from "@/assets/blog-wine-pairing.jpg";
+import blogProsciutto from "@/assets/blog-prosciutto.jpg";
+import blogCooking from "@/assets/blog-cooking.jpg";
+import blogGrilling from "@/assets/blog-grilling.jpg";
 
 const WineHam = () => {
   return (
@@ -34,8 +37,44 @@ const WineHam = () => {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Esplora tutta la nostra conoscenza</h3>
-                  <p className="text-sm mb-6 opacity-90">Scopri tutti i nostri articoli sul mondo della suinicoltura</p>
-                  <Link to="/blog"><Button variant="secondary" className="w-full">Vai al Blog</Button></Link>
+                  <div className="space-y-4 mt-6">
+                    <Link to="/blog/prosciutto-40-tradizione-innovazione" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogProsciutto} alt="Prosciutto 4.0" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Prosciutto 4.0</p>
+                          <p className="text-xs opacity-75">5 Set, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/tagli-alternativi-maiale-cucina" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogCooking} alt="Tagli Alternativi" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Tagli alternativi</p>
+                          <p className="text-xs opacity-75">5 Ott, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/guida-grigliata-estiva" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogGrilling} alt="Grigliata Estiva" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Grigliata estiva</p>
+                          <p className="text-xs opacity-75">6 Lug, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/mangalica-storia-sapori" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogWinePairing} alt="Mangalica" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Mangalica</p>
+                          <p className="text-xs opacity-75">16 Lug, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Eccellenza suina da quattro generazioni</h3>

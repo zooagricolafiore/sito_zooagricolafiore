@@ -2,13 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactInfoSection from "@/components/ContactInfoSection";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import productsHero from "@/assets/products-hero.jpg";
-import pigsNature from "@/assets/pigs-nature.jpg";
-import blackPigs from "@/assets/black-pigs.jpg";
-import animalWelfare from "@/assets/animal-welfare.jpg";
-import brado from "@/assets/produzione-brado.jpg"
-import fiore from "@/assets/produzione-fiore.jpg"
-import classico from "@/assets/produzione-classic.jpg"
+import brado from "@/assets/produzione-brado.jpg";
+import fiore from "@/assets/produzione-fiore.jpg";
+import classico from "@/assets/produzione-classic.jpg";
 
 const Prodotti = () => {
   return (
@@ -53,13 +51,15 @@ const Prodotti = () => {
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                 Linea allevata indoor a bassa densità con dieta controllata conforme ai disciplinari Parma/ San Daniele
               </p>
-              <Button 
-                variant="default" 
-                size="lg" 
-                className="rounded-full px-8 bg-[#2d5016] hover:bg-[#3d6020] text-white"
-              >
-                Scopri di Più: Classic
-              </Button>
+              <Link to="/prodotti/fiore-classic">
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="rounded-full px-8 bg-[#2d5016] hover:bg-[#3d6020] text-white"
+                >
+                  Scopri di Più: Classic
+                </Button>
+              </Link>
             </div>
 
             {/* Brado Line */}
@@ -77,13 +77,15 @@ const Prodotti = () => {
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                 Linea esclusiva dell'azienda: suini allevati allo stato semi brado fra querce, ghiande e piscine naturali; movimento costante, stress minimo e aromi delicati
               </p>
-              <Button 
-                variant="default" 
-                size="lg" 
-                className="rounded-full px-8 bg-[#2d5016] hover:bg-[#3d6020] text-white"
-              >
-                Scopri di più: Brado
-              </Button>
+              <Link to="/prodotti/fiore-brado">
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="rounded-full px-8 bg-[#2d5016] hover:bg-[#3d6020] text-white"
+                >
+                  Scopri di più: Brado
+                </Button>
+              </Link>
             </div>
 
             {/* Mangalica Line */}
@@ -101,13 +103,15 @@ const Prodotti = () => {
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                 Antica razza ungherese "maiale pecora", famosa come "<em>Kobe of pork</em>" per la marezzatura elevata, il grasso ricco di omega-3/6 e il gusto profondo
               </p>
-              <Button 
-                variant="default" 
-                size="lg" 
-                className="rounded-full px-8 bg-[#2d5016] hover:bg-[#3d6020] text-white"
-              >
-                Scopri di Più: Mangalica
-              </Button>
+              <Link to="/prodotti/fiore-mangalica">
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="rounded-full px-8 bg-[#2d5016] hover:bg-[#3d6020] text-white"
+                >
+                  Scopri di Più: Mangalica
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

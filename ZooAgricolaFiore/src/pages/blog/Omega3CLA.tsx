@@ -4,6 +4,9 @@ import ContactInfoSection from "@/components/ContactInfoSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import blogOmega3 from "@/assets/blog-omega3.jpg";
+import blogSustainable from "@/assets/blog-sustainable.jpg";
+import blogCooking from "@/assets/blog-cooking.jpg";
+import blogPigWelfare from "@/assets/blog-pig-welfare.jpg";
 
 const Omega3CLA = () => {
   return (
@@ -34,8 +37,44 @@ const Omega3CLA = () => {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Esplora tutta la nostra conoscenza</h3>
-                  <p className="text-sm mb-6 opacity-90">Scopri tutti i nostri articoli sul mondo della suinicoltura</p>
-                  <Link to="/blog"><Button variant="secondary" className="w-full">Vai al Blog</Button></Link>
+                  <div className="space-y-4 mt-6">
+                    <Link to="/blog/perche-scegliere-suino-semibrado" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogSustainable} alt="Suino Semibrado" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Suino semibrado</p>
+                          <p className="text-xs opacity-75">26 Giu, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/tagli-alternativi-maiale-cucina" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogCooking} alt="Tagli Alternativi" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Tagli alternativi</p>
+                          <p className="text-xs opacity-75">5 Ott, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/nose-to-tail-usare-tutto-maiale" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogPigWelfare} alt="Nose to Tail" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Nose to Tail</p>
+                          <p className="text-xs opacity-75">25 Ago, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/antibiotic-free-pork-carne-sana" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogPigWelfare} alt="Antibiotic Free" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Antibiotic-Free Pork</p>
+                          <p className="text-xs opacity-75">15 Ago, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Eccellenza suina da quattro generazioni</h3>

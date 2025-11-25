@@ -4,6 +4,9 @@ import ContactInfoSection from "@/components/ContactInfoSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import blogGenetics from "@/assets/blog-genetics.jpg";
+import blogSustainable from "@/assets/blog-sustainable.jpg";
+import blogStoriaSapori from "@/assets/blog-storia-sapori.jpg";
+import heroFarm from "@/assets/hero-farm.jpg";
 
 const SelezioneGenetica = () => {
   return (
@@ -44,14 +47,44 @@ const SelezioneGenetica = () => {
                   <h3 className="text-xl font-bold mb-4">
                     Esplora tutta la nostra conoscenza
                   </h3>
-                  <p className="text-sm mb-6 opacity-90">
-                    Scopri tutti i nostri articoli sul mondo della suinicoltura
-                  </p>
-                  <Link to="/blog">
-                    <Button variant="secondary" className="w-full">
-                      Vai al Blog
-                    </Button>
-                  </Link>
+                  <div className="space-y-4 mt-6">
+                    <Link to="/blog/rare-breed-pork-razze-antiche" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogSustainable} alt="Rare Breed" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Rare Breed Pork</p>
+                          <p className="text-xs opacity-75">5 Ago, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/mangalica-storia-sapori" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogStoriaSapori} alt="Mangalica" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Mangalica: storia e sapori</p>
+                          <p className="text-xs opacity-75">16 Lug, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/agricoltura-rigenerativa-suinicoltura" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={heroFarm} alt="Agricoltura Rigenerativa" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Agricoltura rigenerativa</p>
+                          <p className="text-xs opacity-75">15 Set, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/carni-suine-sostenibili-innovazione" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogSustainable} alt="Carni Sostenibili" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Carni suine sostenibili</p>
+                          <p className="text-xs opacity-75">25 Set, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="bg-forest-green text-white rounded-2xl p-6">

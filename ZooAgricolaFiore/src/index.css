@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 145 60% 20%;
+    --primary: 104 89% 21%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
@@ -34,13 +34,18 @@ All colors MUST be HSL.
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 145 60% 20%;
+    --ring: 104 89% 21%;
 
     --radius: 0.75rem;
     
-    /* Custom agricultural theme colors */
-    --forest-green: 145 60% 20%;
-    --golden-yellow: 45 100% 51%;
+    /* Custom agricultural theme colors - ZooAgricola Fiore Brand Colors */
+    --forest-green: 104 89% 21%;
+    --dark-green: 104 66% 8%;
+    --golden-yellow: 44 98% 53%;
+    --brown: 40 21% 42%;
+    --sage-green: 131 11% 63%;
+    --gray-blue: 216 9% 55%;
+    --brand-red: 7 65% 46%;
     --overlay-dark: 0 0% 0%;
     
     /* Gradients */
@@ -76,7 +81,7 @@ All colors MUST be HSL.
     --popover: 145 20% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 145 60% 35%;
+    --primary: 104 89% 35%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 145 20% 18%;
@@ -85,15 +90,15 @@ All colors MUST be HSL.
     --muted: 145 20% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 45 100% 51%;
+    --accent: 44 98% 53%;
     --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 145 20% 25%;
-    --input: 145 20% 25%;
-    --ring: 45 100% 51%;
+    --border: 104 20% 25%;
+    --input: 104 20% 25%;
+    --ring: 44 98% 53%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

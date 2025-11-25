@@ -1,6 +1,7 @@
 import { Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "@/assets/logo_zooagricola.avif";
 
@@ -28,7 +29,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/people/Az-Zooagricola-FIORE-di-Magnaterra-Daniele/100057201650265/?rdid=3NS1I32580AeI2IV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CQwybdB7v%2F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-golden-yellow flex items-center justify-center hover:bg-golden-yellow/90 transition-colors"
@@ -37,7 +38,7 @@ const Footer = () => {
                 <Facebook className="w-5 h-5 text-forest-green" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/aziendazooagricolafiore/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-golden-yellow flex items-center justify-center hover:bg-golden-yellow/90 transition-colors"
@@ -52,24 +53,24 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-bold mb-4">Su di noi</h4>
             <nav className="space-y-2">
-              <a
-                href="#eventi"
+              <Link
+                to="/eventi"
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Riconoscimenti e Eventi
-              </a>
-              <a
-                href="#cosa-ci-contraddistingue"
+              </Link>
+              <Link
+                to="/"
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Cosa ci contraddistingue
-              </a>
-              <a
-                href="#blog"
+              </Link>
+              <Link
+                to="/blog"
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Blog
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -77,24 +78,24 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-bold mb-4">La nostra realtà</h4>
             <nav className="space-y-2">
-              <a
-                href="#prodotti"
+              <Link
+                to="/prodotti"
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 I nostri prodotti
-              </a>
-              <a
-                href="#storia"
+              </Link>
+              <Link
+                to="/storia"
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 La nostra storia
-              </a>
-              <a
-                href="#recensioni"
+              </Link>
+              <Link
+                to="/"
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Recensioni
-              </a>
+              </Link>
             </nav>
           </div>
 

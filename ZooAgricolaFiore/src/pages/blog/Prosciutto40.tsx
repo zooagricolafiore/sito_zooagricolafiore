@@ -4,6 +4,9 @@ import ContactInfoSection from "@/components/ContactInfoSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import blogProsciutto from "@/assets/blog-prosciutto.jpg";
+import blogWinePairing from "@/assets/blog-wine-pairing.jpg";
+import blogCooking from "@/assets/blog-cooking.jpg";
+import blogPigWelfare from "@/assets/blog-pig-welfare.jpg";
 
 const Prosciutto40 = () => {
   return (
@@ -34,8 +37,44 @@ const Prosciutto40 = () => {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Esplora tutta la nostra conoscenza</h3>
-                  <p className="text-sm mb-6 opacity-90">Scopri tutti i nostri articoli sul mondo della suinicoltura</p>
-                  <Link to="/blog"><Button variant="secondary" className="w-full">Vai al Blog</Button></Link>
+                  <div className="space-y-4 mt-6">
+                    <Link to="/blog/wine-ham-abbinamenti-prosciutto" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogWinePairing} alt="Wine & Ham" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Wine & Ham</p>
+                          <p className="text-xs opacity-75">25 Lug, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/tagli-alternativi-maiale-cucina" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogCooking} alt="Tagli Alternativi" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Tagli alternativi</p>
+                          <p className="text-xs opacity-75">5 Ott, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/nose-to-tail-usare-tutto-maiale" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogPigWelfare} alt="Nose to Tail" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Nose to Tail</p>
+                          <p className="text-xs opacity-75">25 Ago, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/blog/selezione-genetica-suinicoltura" className="block group">
+                      <div className="flex gap-3 items-start">
+                        <img src={blogProsciutto} alt="Selezione Genetica" className="w-16 h-16 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <p className="text-sm font-semibold group-hover:text-golden-yellow transition-colors">Selezione genetica</p>
+                          <p className="text-xs opacity-75">5 Nov, 2025</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
                 <div className="bg-forest-green text-white rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-4">Eccellenza suina da quattro generazioni</h3>
