@@ -5,8 +5,51 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroFarm from "@/assets/hero-farm.jpg";
 import fiore from "@/assets/produzione-fiore.jpg";
+import mangalica1 from "@/assets/mangalica-1.avif";
+import mangalica2 from "@/assets/mangalica-2.avif";
+import mangalica3 from "@/assets/mangalica-3.avif";
+
+// Fresco imports
+import bracciolaCollo from "@/assets/products/Fiore Mangalica/Fresco/Braciola di collo con osso.avif";
+import bracciolaLombo from "@/assets/products/Fiore Mangalica/Fresco/Braciola di lombo con osso.avif";
+import costolette from "@/assets/products/Fiore Mangalica/Fresco/Costolette.avif";
+import filetto from "@/assets/products/Fiore Mangalica/Fresco/Filetto.avif";
+import salsicce from "@/assets/products/Fiore Mangalica/Fresco/Salsicce.avif";
+
+// Stagionato imports
+import culatelloFiorello from "@/assets/products/Fiore Mangalica/Stagionato/Culatello (Fiorello).avif";
+import guanciale from "@/assets/products/Fiore Mangalica/Stagionato/Guanciale.avif";
+import lombetto from "@/assets/products/Fiore Mangalica/Stagionato/Lombetto.avif";
+import lonzaCapocollo from "@/assets/products/Fiore Mangalica/Stagionato/Lonza (Capocollo).avif";
+import pancettaTesa from "@/assets/products/Fiore Mangalica/Stagionato/Pancetta (tesa).avif";
+import prosciuttoOsso from "@/assets/products/Fiore Mangalica/Stagionato/Prosciutto con osso.avif";
+import prosciuttoDisossato from "@/assets/products/Fiore Mangalica/Stagionato/Prosciutto disossato.avif";
+import salsiccie from "@/assets/products/Fiore Mangalica/Stagionato/Salsiccie.avif";
+import spallaOsso from "@/assets/products/Fiore Mangalica/Stagionato/Spalla con osso.avif";
+import spallaDisossata from "@/assets/products/Fiore Mangalica/Stagionato/Spalla disossata.avif";
 
 const FioreMangalica = () => {
+  const frescoProducts = [
+    { name: "Braciola di collo con osso", image: bracciolaCollo },
+    { name: "Braciola di lombo con osso", image: bracciolaLombo },
+    { name: "Costolette", image: costolette },
+    { name: "Filetto", image: filetto },
+    { name: "Salsicce", image: salsicce },
+  ];
+
+  const stagionatoProducts = [
+    { name: "Culatello (Fiorello)", image: culatelloFiorello },
+    { name: "Guanciale", image: guanciale },
+    { name: "Lombetto", image: lombetto },
+    { name: "Lonza (Capocollo)", image: lonzaCapocollo },
+    { name: "Pancetta (tesa)", image: pancettaTesa },
+    { name: "Prosciutto con osso", image: prosciuttoOsso },
+    { name: "Prosciutto disossato", image: prosciuttoDisossato },
+    { name: "Salsiccie", image: salsiccie },
+    { name: "Spalla con osso", image: spallaOsso },
+    { name: "Spalla disossata", image: spallaDisossata },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -68,21 +111,21 @@ const FioreMangalica = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src={fiore}
+                  src={mangalica1}
                   alt="Mangalica Allevamento 1"
                   className="w-full h-[300px] object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src={fiore}
+                  src={mangalica2}
                   alt="Mangalica Allevamento 2"
                   className="w-full h-[300px] object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src={fiore}
+                  src={mangalica3}
                   alt="Mangalica Allevamento 3"
                   className="w-full h-[300px] object-cover"
                 />
@@ -95,36 +138,18 @@ const FioreMangalica = () => {
                 Fresco
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Braciola di collo con osso image */}
+                {frescoProducts.map((product, index) => (
+                  <div key={index} className="text-center">
+                    <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-medium">{product.name}</p>
                   </div>
-                  <p className="text-sm font-medium">Braciola di collo con osso</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Braciola di lombo con osso image */}
-                  </div>
-                  <p className="text-sm font-medium">Braciola di lombo con osso</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Costolette image */}
-                  </div>
-                  <p className="text-sm font-medium">Costolette</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Filetto image */}
-                  </div>
-                  <p className="text-sm font-medium">Filetto</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Salsicce image */}
-                  </div>
-                  <p className="text-sm font-medium">Salsicce</p>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -134,66 +159,18 @@ const FioreMangalica = () => {
                 Stagionato
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Culatello (Fiorello) image */}
+                {stagionatoProducts.map((product, index) => (
+                  <div key={index} className="text-center">
+                    <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-medium">{product.name}</p>
                   </div>
-                  <p className="text-sm font-medium">Culatello (Fiorello)</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Guanciale image */}
-                  </div>
-                  <p className="text-sm font-medium">Guanciale</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Lombetto image */}
-                  </div>
-                  <p className="text-sm font-medium">Lombetto</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Lonza (Capocollo) image */}
-                  </div>
-                  <p className="text-sm font-medium">Lonza (Capocollo)</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Pancetta (tesa) image */}
-                  </div>
-                  <p className="text-sm font-medium">Pancetta (tesa)</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Prosciutto con osso image */}
-                  </div>
-                  <p className="text-sm font-medium">Prosciutto con osso</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Prosciutto disossato image */}
-                  </div>
-                  <p className="text-sm font-medium">Prosciutto disossato</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Salsiccie image */}
-                  </div>
-                  <p className="text-sm font-medium">Salsiccie</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Spalla con osso image */}
-                  </div>
-                  <p className="text-sm font-medium">Spalla con osso</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Spalla disossata image */}
-                  </div>
-                  <p className="text-sm font-medium">Spalla disossata</p>
-                </div>
+                ))}
               </div>
             </div>
 

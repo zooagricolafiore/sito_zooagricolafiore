@@ -6,7 +6,99 @@ import { Link } from "react-router-dom";
 import heroFarm from "@/assets/hero-farm.jpg";
 import classico from "@/assets/produzione-classic.jpg";
 
+// Fresco imports
+import bracciolaCollo from "@/assets/products/Fiore Classic/Fresco/Bracciola di collo con osso.avif";
+import bracciolaLombo from "@/assets/products/Fiore Classic/Fresco/Bracciola di lombo con osso.avif";
+import costolette from "@/assets/products/Fiore Classic/Fresco/Costolette.avif";
+import fegatelli from "@/assets/products/Fiore Classic/Fresco/Fegatelli.avif";
+import fettineCollo from "@/assets/products/Fiore Classic/Fresco/Fettine di collo disossato.avif";
+import fettineLombo from "@/assets/products/Fiore Classic/Fresco/Fettine di lombo disossato (Arista).avif";
+import fettineScanello from "@/assets/products/Fiore Classic/Fresco/Fettine di scanello di prosciutto.avif";
+import filetto from "@/assets/products/Fiore Classic/Fresco/Filetto.avif";
+import guancialeFresco from "@/assets/products/Fiore Classic/Fresco/Guanciale fresco.avif";
+import macinato from "@/assets/products/Fiore Classic/Fresco/Macinato.avif";
+import pancetta from "@/assets/products/Fiore Classic/Fresco/Pancetta.avif";
+import prosciuttoFrescoOsso from "@/assets/products/Fiore Classic/Fresco/Prosciutto fresco con osso.avif";
+import prosciuttoFrescoDisossato from "@/assets/products/Fiore Classic/Fresco/Prosciutto fresco disossato.avif";
+import ribs from "@/assets/products/Fiore Classic/Fresco/Ribs.avif";
+import roastBeef from "@/assets/products/Fiore Classic/Fresco/Roast beef.avif";
+import salsicce from "@/assets/products/Fiore Classic/Fresco/Salsicce.avif";
+import spallaFrescaOsso from "@/assets/products/Fiore Classic/Fresco/Spalla fresca con osso.avif";
+import spallaFrescaDisossata from "@/assets/products/Fiore Classic/Fresco/Spalla fresca disossata.avif";
+import spezzatino from "@/assets/products/Fiore Classic/Fresco/Spezzatino.avif";
+import stinco from "@/assets/products/Fiore Classic/Fresco/Stinco.avif";
+
+// Stagionato imports
+import coppiette from "@/assets/products/Fiore Classic/Stagionato/Coppiette.avif";
+import culatello from "@/assets/products/Fiore Classic/Stagionato/Culatello.avif";
+import guanciale from "@/assets/products/Fiore Classic/Stagionato/Guanciale.avif";
+import lomboStagionato from "@/assets/products/Fiore Classic/Stagionato/Lombo stagionato.avif";
+import lonzaStagionata from "@/assets/products/Fiore Classic/Stagionato/Lonza Stagionata.avif";
+import pancettaArrotolata from "@/assets/products/Fiore Classic/Stagionato/Pancetta arrotolata.avif";
+import pancettaTesa from "@/assets/products/Fiore Classic/Stagionato/Pancetta tesa.avif";
+import prosciuttoDisossato from "@/assets/products/Fiore Classic/Stagionato/Prosciutto disossato.avif";
+import salsicceStag from "@/assets/products/Fiore Classic/Stagionato/Salsicce.avif";
+import spallaDisossata from "@/assets/products/Fiore Classic/Stagionato/Spalla disossata.avif";
+
+// Cotto imports
+import coppa from "@/assets/products/Fiore Classic/Cotto/Coppa.avif";
+
+// Vasetti imports
+import pateFiore from "@/assets/products/Fiore Classic/Vasetti/Patè Fiore.avif";
+import prosciuttoOlio from "@/assets/products/Fiore Classic/Vasetti/Prosciutto stagionato sott_olio.avif";
+import salsicceOlio from "@/assets/products/Fiore Classic/Vasetti/Salsicce sott_olio.avif";
+import strutto from "@/assets/products/Fiore Classic/Vasetti/Strutto Fiore.avif";
+import tonnoOlio from "@/assets/products/Fiore Classic/Vasetti/Tonno sott_olio.avif";
+
 const FioreClassic = () => {
+  const frescoProducts = [
+    { name: "Bracciola di collo con osso", image: bracciolaCollo },
+    { name: "Bracciola di lombo con osso", image: bracciolaLombo },
+    { name: "Costolette", image: costolette },
+    { name: "Fegatelli", image: fegatelli },
+    { name: "Fettine di collo disossato", image: fettineCollo },
+    { name: "Fettine di lombo disossato (Arista)", image: fettineLombo },
+    { name: "Fettine di scanello di prosciutto", image: fettineScanello },
+    { name: "Filetto", image: filetto },
+    { name: "Guanciale fresco", image: guancialeFresco },
+    { name: "Macinato", image: macinato },
+    { name: "Pancetta", image: pancetta },
+    { name: "Prosciutto fresco con osso", image: prosciuttoFrescoOsso },
+    { name: "Prosciutto fresco disossato", image: prosciuttoFrescoDisossato },
+    { name: "Ribs", image: ribs },
+    { name: "Roast beef", image: roastBeef },
+    { name: "Salsicce", image: salsicce },
+    { name: "Spalla fresca con osso", image: spallaFrescaOsso },
+    { name: "Spalla fresca disossata", image: spallaFrescaDisossata },
+    { name: "Spezzatino", image: spezzatino },
+    { name: "Stinco", image: stinco },
+  ];
+
+  const stagionatoProducts = [
+    { name: "Coppiette", image: coppiette },
+    { name: "Culatello", image: culatello },
+    { name: "Guanciale", image: guanciale },
+    { name: "Lombo stagionato", image: lomboStagionato },
+    { name: "Lonza Stagionata", image: lonzaStagionata },
+    { name: "Pancetta arrotolata", image: pancettaArrotolata },
+    { name: "Pancetta tesa", image: pancettaTesa },
+    { name: "Prosciutto disossato", image: prosciuttoDisossato },
+    { name: "Salsicce", image: salsicceStag },
+    { name: "Spalla disossata", image: spallaDisossata },
+  ];
+
+  const cottoProducts = [
+    { name: "Coppa", image: coppa },
+  ];
+
+  const vasettiProducts = [
+    { name: "Patè Fiore", image: pateFiore },
+    { name: "Prosciutto stagionato sott'olio", image: prosciuttoOlio },
+    { name: "Salsicce sott'olio", image: salsicceOlio },
+    { name: "Strutto Fiore", image: strutto },
+    { name: "Tonno sott'olio", image: tonnoOlio },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -68,13 +160,18 @@ const FioreClassic = () => {
                 Fresco
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {/* Product images will be added here */}
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Image placeholder */}
+                {frescoProducts.map((product, index) => (
+                  <div key={index} className="text-center">
+                    <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-medium">{product.name}</p>
                   </div>
-                  <p className="text-sm font-medium">Prodotto</p>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -84,13 +181,18 @@ const FioreClassic = () => {
                 Stagionato
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {/* Product images will be added here */}
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Image placeholder */}
+                {stagionatoProducts.map((product, index) => (
+                  <div key={index} className="text-center">
+                    <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-medium">{product.name}</p>
                   </div>
-                  <p className="text-sm font-medium">Prodotto</p>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -100,13 +202,18 @@ const FioreClassic = () => {
                 Cotto
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {/* Product images will be added here */}
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Image placeholder */}
+                {cottoProducts.map((product, index) => (
+                  <div key={index} className="text-center">
+                    <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-medium">{product.name}</p>
                   </div>
-                  <p className="text-sm font-medium">Prodotto</p>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -116,13 +223,18 @@ const FioreClassic = () => {
                 Vasetti
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {/* Product images will be added here */}
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Image placeholder */}
+                {vasettiProducts.map((product, index) => (
+                  <div key={index} className="text-center">
+                    <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-medium">{product.name}</p>
                   </div>
-                  <p className="text-sm font-medium">Prodotto</p>
-                </div>
+                ))}
               </div>
             </div>
 

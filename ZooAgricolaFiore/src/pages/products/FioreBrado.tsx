@@ -6,7 +6,30 @@ import { Link } from "react-router-dom";
 import heroFarm from "@/assets/hero-farm.jpg";
 import brado from "@/assets/produzione-brado.jpg";
 
+// Stagionato imports
+import culatelloFiorello from "@/assets/products/Fiore Brado/Stagionato/Culatello (Fiorello).avif";
+import guanciale from "@/assets/products/Fiore Brado/Stagionato/Guanciale.avif";
+import lombetto from "@/assets/products/Fiore Brado/Stagionato/Lombetto.avif";
+import lonza from "@/assets/products/Fiore Brado/Stagionato/Lonza.avif";
+import pancettaTesa from "@/assets/products/Fiore Brado/Stagionato/Pancetta tesa.avif";
+import prosciuttoOsso from "@/assets/products/Fiore Brado/Stagionato/Prosciutto con osso.avif";
+import prosciuttoDisossato from "@/assets/products/Fiore Brado/Stagionato/Prosciutto disossato.avif";
+import spallaOsso from "@/assets/products/Fiore Brado/Stagionato/Spalla con osso.avif";
+import spallaDisossata from "@/assets/products/Fiore Brado/Stagionato/Spalla disossata.avif";
+
 const FioreBrado = () => {
+  const stagionatoProducts = [
+    { name: "Culatello (Fiorello)", image: culatelloFiorello },
+    { name: "Guanciale", image: guanciale },
+    { name: "Lombetto", image: lombetto },
+    { name: "Lonza", image: lonza },
+    { name: "Pancetta tesa", image: pancettaTesa },
+    { name: "Prosciutto con osso", image: prosciuttoOsso },
+    { name: "Prosciutto disossato", image: prosciuttoDisossato },
+    { name: "Spalla con osso", image: spallaOsso },
+    { name: "Spalla disossata", image: spallaDisossata },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -28,7 +51,7 @@ const FioreBrado = () => {
               Fiore Brado
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
-              Linea esclusiva dell'azienda: suini allevati bradi fra querce, ghiande e piscine naturali; movimento costante, stress minimo e aromi delicati
+              Linea esclusiva dell'azienda: suini allevati allo stato semi brado fra querce, ghiande e piscine naturali; movimento costante, stress minimo e aromi delicati
             </p>
           </div>
         </div>
@@ -68,60 +91,18 @@ const FioreBrado = () => {
                 Stagionato
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Culatello (Fiorello) image */}
+                {stagionatoProducts.map((product, index) => (
+                  <div key={index} className="text-center">
+                    <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-medium">{product.name}</p>
                   </div>
-                  <p className="text-sm font-medium">Culatello (Fiorello)</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Guanciale image */}
-                  </div>
-                  <p className="text-sm font-medium">Guanciale</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Lombetto image */}
-                  </div>
-                  <p className="text-sm font-medium">Lombetto</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Lonza image */}
-                  </div>
-                  <p className="text-sm font-medium">Lonza</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Pancetta tesa image */}
-                  </div>
-                  <p className="text-sm font-medium">Pancetta tesa</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Prosciutto con osso image */}
-                  </div>
-                  <p className="text-sm font-medium">Prosciutto con osso</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Prosciutto disossato image */}
-                  </div>
-                  <p className="text-sm font-medium">Prosciutto disossato</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Spalla con osso image */}
-                  </div>
-                  <p className="text-sm font-medium">Spalla con osso</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-square rounded-lg overflow-hidden mb-3 bg-muted">
-                    {/* Spalla disossata image */}
-                  </div>
-                  <p className="text-sm font-medium">Spalla disossata</p>
-                </div>
+                ))}
               </div>
             </div>
 

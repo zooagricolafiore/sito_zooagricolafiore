@@ -12,7 +12,8 @@ const Navigation = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+      // Only show navigation when at the top of the page
+      if (currentScrollY < 100) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

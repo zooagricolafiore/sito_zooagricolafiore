@@ -1,5 +1,6 @@
 import { Users, Grape } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import familyVintage from "@/assets/family-vintage.jpg";
 import familyModern from "@/assets/family-modern.jpg";
 
@@ -28,20 +29,24 @@ const IdentitySection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                variant="hero"
-                size="lg"
-                className="rounded-full px-8 text-base"
-              >
-                Scopri di più su di noi
-              </Button>
-              <Button
-                variant="hero"
-                size="lg"
-                className="rounded-full px-8 text-base"
-              >
-                I nostri prodotti
-              </Button>
+              <Link to="/storia">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="rounded-full px-8 text-base"
+                >
+                  Scopri di più su di noi
+                </Button>
+              </Link>
+              <Link to="/prodotti">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="rounded-full px-8 text-base"
+                >
+                  I nostri prodotti
+                </Button>
+              </Link>
             </div>
           </div>
 
