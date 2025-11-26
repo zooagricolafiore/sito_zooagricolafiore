@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo_zooagricola.avif";
 
 const Navigation = () => {
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +45,7 @@ const Navigation = () => {
             <img src={logo} alt="ZooAgricolaFiore Logo" className="h-12 w-auto" />
           </Link>
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               item.href.startsWith("#") ? (
@@ -70,13 +72,47 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <Link to="/prodotti">
+          {/* Desktop CTA Button */}
+          <Link to="/prodotti" className="hidden md:block">
             <Button variant="hero" size="lg" className="rounded-full px-8">
               I nostri prodotti
             </Button>
           </Link>
+
+          {/* Mobile Hamburger Menu */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden text-white p-2"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-forest-green border-t border-white/20">
+            <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-base font-medium transition-colors hover:text-golden-yellow py-2 ${
+                    item.active ? "text-golden-yellow" : "text-white"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link to="/prodotti" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="hero" size="lg" className="rounded-full px-8 w-full">
+                  I nostri prodotti
+                </Button>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

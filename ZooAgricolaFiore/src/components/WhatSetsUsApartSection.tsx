@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import animalWelfare from "@/assets/animal-welfare.jpg";
 import slowAging from "@/assets/slow-aging.jpg";
@@ -11,6 +11,19 @@ import innovation from "@/assets/innovation.jpg";
 
 const WhatSetsUsApartSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Auto-scroll for mobile only
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % features.length);
+    }, 1500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const features = [
     {
       badge: "Vita Serena",
@@ -90,8 +103,9 @@ const WhatSetsUsApartSection = () => {
 
         {/* Feature Cards Carousel */}
         <div className="overflow-hidden">
+          {/* Desktop: 3 cards */}
           <div 
-            className="flex gap-6 transition-transform duration-500 ease-in-out"
+            className="hidden md:flex gap-6 transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
           >
             {[...features, ...features.slice(0, 3)].map((feature, index) => (
@@ -100,6 +114,49 @@ const WhatSetsUsApartSection = () => {
               to={feature.link}
               className="bg-forest-green rounded-2xl p-6 text-white flex-shrink-0 hover:bg-forest-green/90 transition-colors cursor-pointer block"
               style={{ width: 'calc(33.333% - 16px)' }}
+            >
+              {/* Image */}
+              <div className="mb-5 rounded-xl overflow-hidden">
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="w-full h-56 object-cover"
+                />
+              </div>
+
+              {/* Badge */}
+              <div className="inline-block mb-3">
+                <div className="border-2 border-golden-yellow rounded-full px-4 py-1">
+                  <span className="text-golden-yellow text-xs font-medium">
+                    {feature.badge}
+                  </span>
+                </div>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+
+              {/* Separator */}
+              <div className="w-full h-px bg-white/20 mb-3" />
+
+              {/* Description */}
+              <p className="text-white/85 text-sm leading-relaxed">
+                {feature.description}
+              </p>
+            </Link>
+          ))}
+          </div>
+
+          {/* Mobile: 1 card at a time */}
+          <div 
+            className="md:hidden flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {features.map((feature, index) => (
+            <Link
+              key={index}
+              to={feature.link}
+              className="bg-forest-green rounded-2xl p-6 text-white flex-shrink-0 hover:bg-forest-green/90 transition-colors cursor-pointer block w-full"
             >
               {/* Image */}
               <div className="mb-5 rounded-xl overflow-hidden">
