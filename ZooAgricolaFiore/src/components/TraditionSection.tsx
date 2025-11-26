@@ -70,11 +70,11 @@ const TraditionSection = () => {
                 loop
                 muted
                 playsInline
-                preload="metadata"
+                preload="auto"
                 className="w-full h-auto object-cover"
                 style={{ maxHeight: '500px' }}
               >
-                <source src={videoZooagricola} type="video/mp4" />
+                <source src="/video_zooagricola.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
