@@ -151,7 +151,7 @@ const Blog = () => {
                   <span className="text-golden-yellow text-sm font-medium">
                     {post.date}
                   </span>
-                  <h3 className="text-white text-xl font-bold leading-tight">
+                  <h3 className="text-white text-sm font-bold leading-tight">
                     {post.title}
                   </h3>
                 </div>
