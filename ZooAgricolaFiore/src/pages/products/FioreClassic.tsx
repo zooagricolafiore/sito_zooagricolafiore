@@ -116,7 +116,7 @@ const FioreClassic = () => {
 
         <div className="container relative z-10 mx-auto px-6">
           <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
               Fiore Classic
             </h1>
             <p className="text-xl md:text-2xl text-white/90">

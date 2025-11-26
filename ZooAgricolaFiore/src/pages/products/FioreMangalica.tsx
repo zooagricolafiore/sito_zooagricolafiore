@@ -70,7 +70,7 @@ const FioreMangalica = () => {
             <div className="inline-block mb-4 px-4 py-2 border-2 border-golden-yellow rounded-full">
               <p className="text-golden-yellow font-semibold">"The kobe of pork"</p>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
               Fiore Mangalica
             </h1>
             <p className="text-xl md:text-2xl text-white/90">

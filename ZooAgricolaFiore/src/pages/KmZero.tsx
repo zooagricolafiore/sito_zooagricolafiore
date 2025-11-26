@@ -33,7 +33,7 @@ const KmZero = () => {
                 </span>
               </div>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Km Zero
             </h1>
           </div>

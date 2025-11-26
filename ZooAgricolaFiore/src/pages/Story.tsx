@@ -25,7 +25,7 @@ const Story = () => {
         {/* Content */}
         <div className="container relative z-10 mx-auto px-6">
           <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               La nostra storia
             </h1>
             <p className="text-2xl text-white/90">

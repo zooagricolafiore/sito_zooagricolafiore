@@ -66,15 +66,15 @@ const TraditionSection = () => {
             {/* Video of pigs in nature */}
             <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-black">
               <video
-                src={videoZooagricola}
                 autoPlay
                 loop
                 muted
                 playsInline
-                preload="auto"
+                preload="metadata"
                 className="w-full h-auto object-cover"
                 style={{ maxHeight: '500px' }}
               >
+                <source src={videoZooagricola} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

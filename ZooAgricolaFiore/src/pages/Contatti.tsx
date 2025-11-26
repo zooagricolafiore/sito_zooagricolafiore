@@ -20,7 +20,7 @@ const Contatti = () => {
         </div>
         
         <div className="container relative z-10 mx-auto px-6">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Contattaci
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl">
