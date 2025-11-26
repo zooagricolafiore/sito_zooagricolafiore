@@ -14,7 +14,7 @@ const SelezioneGenetica = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-start">
+      <section className="relative h-[60vh] lg:h-[80vh] flex items-center justify-start">
         <div className="absolute inset-0">
           <img
             src={blogGenetics}

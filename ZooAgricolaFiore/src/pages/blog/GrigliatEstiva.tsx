@@ -13,7 +13,7 @@ const GrigliatEstiva = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      <section className="relative h-[50vh] flex items-center justify-start">
+      <section className="relative h-[60vh] lg:h-[80vh] flex items-center justify-start">
         <div className="absolute inset-0">
           <img src={blogGrilling} alt="Grigliata Estiva" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40" />
