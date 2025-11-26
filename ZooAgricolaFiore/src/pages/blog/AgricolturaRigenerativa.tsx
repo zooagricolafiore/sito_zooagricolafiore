@@ -19,7 +19,7 @@ const AgricolturaRigenerativa = () => {
         </div>
         <div className="container relative z-10 mx-auto px-6 pt-20">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-2xl md:text-6xl font-bold text-white mb-4 leading-tight">
               Agricoltura rigenerativa e suinicoltura: quando il suolo ringrazia
             </h1>
             <p className="text-xl text-white/90">
